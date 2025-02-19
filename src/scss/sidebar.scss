@@ -1,0 +1,223 @@
+.main-page-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.fixed-sidebar {
+    padding: 40px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 380px;
+    padding: 0;
+    z-index: 999;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    background-image: url('/side-menu--bg.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    box-shadow: 4px 3px 20px rgba(16, 33, 34, 0.06);
+    -webkit-transition: -webkit-transform 0.3sease-in;
+    transition: all 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    gap: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+    .fixed-sidebar {
+      max-width: 300px;
+    }
+  }
+
+@media (max-width: 991px) {
+    .fixed-sidebar {
+      max-width: 90%;
+      transform: translateX(-100%);
+        
+      &.active {
+        transform: translateX(0%);
+      }
+    }
+  }
+
+.main-page-wrapper .page-content-two {
+    width: calc(100% - 380px);
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+    .main-page-wrapper .page-content-two {
+      width: calc(100% - 300px);
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .main-page-wrapper .page-content-two {
+      width: 100%;
+      
+      &.active {
+        filter: blur(5px);
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .side-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    &--logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .nav {
+    margin: 84px 0;
+    gap: 40px;
+  
+    &--link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: #000;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: fit-content;
+  
+      &.active {
+        color: #8026F0;
+  
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          width: 40px;
+          background-color: #8026F0;
+          position: absolute;
+          left: 0;
+          margin-top: 7px;
+        }
+      }
+  
+      &:hover {
+        color: #8026F0;
+      }
+    }
+}
+
+@media (max-width: 1399px) {
+    .nav {
+        margin-top: 44px;
+        margin-bottom: 44px;
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    gap: 33px;
+  
+    &--item {
+      max-height: 20px;
+      max-width: 20px;
+      border: 1px solid #8A8A8A;
+      border-radius: 30px;
+      padding: 25px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      
+      &:hover {
+        background-color: rgba(128, 38, 240, 0.05);
+        transition: 0.5s;
+      }
+    }
+}
+
+.header-area {
+    top: 0;
+    padding: 0px 4%;
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    padding: 0px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 30px rgba(32, 35, 56, 0.06);
+}
+
+.header-logo {
+    width: 120px;
+    padding: 10px 0 14px 0;
+}
+
+.sidebar-button {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    cursor: pointer;
+    align-items: flex-end;
+    text-align: right;
+
+    span {
+        display: inline-block;
+        width: 40px;
+        height: 2px;
+        border-radius: 3px;
+        background-color: #8026F0;
+        transition: all 0.5sease;
+
+        &:nth-child(2) {
+            width: 25px;
+        }
+
+        &:nth-child(3) {
+            width: 30px;
+        }
+    }
+}
+
+.menu-close-btn {
+    position: absolute;
+    right: 5%;
+    top: 55px;
+    opacity: 1;
+    cursor: pointer;
+
+    span {
+        display: inline-block;
+        width: 40px;
+        height: 2px;
+        border-radius: 3px;
+        background-color: #8026F0;
+        transition: all 0.5sease;
+
+        &:nth-child(1) {
+            rotate: 45deg;
+            translate: 40px;
+        }
+
+        &:nth-child(2) {
+            rotate: -45deg;
+        }
+    }
+}
