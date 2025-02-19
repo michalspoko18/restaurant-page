@@ -1,102 +1,231 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="preload-transitions">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="node_modules/lightbox2/dist/css/lightbox.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Luca - restocafe</title>
   </head>
   <body>
 
-    <div class="container-fluid">
-      <div class="row">
-          <div class="col-3 position-fixed" id="sticky-sidebar">
-            <div class="side-menu vh-100">
-                <div class="side-menu--top">
-                  <div class="side-menu--logo">
-                    <a href="./" class="navbar-brand text-white">
-                      <img src="Logo.png" alt="logo" class="img-fluid">
-                    </a>
-                  </div>
-                  <div class="nav flex-column flex-nowrap overflow-auto text-white p-2">
-                    <a href="./" class="nav--link active">Start</a>
-                    <a href="./" class="nav--link">O Restauracji</a>
-                    <a href="./" class="nav--link">Menu</a>
-                    <a href="./" class="nav--link">Galeria</a>
-                    <a href="./" class="nav--link">Kontakt</a>
-                  </div>
+  <div class="main-page-wrapper">
+      <div class="fixed-sidebar" id="sticky-sidebar">
+        <div class="menu-close-btn d-lg-none d-flex">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="side-menu vh-100">
+            <div class="side-menu--top">
+              <div class="side-menu--logo">
+                <a href="./" class="navbar-brand text-white">
+                  <img src="resocafe.png" alt="logo" class="img-fluid">
+                </a>
+              </div>
+              <nav class="nav flex-column flex-nowrap overflow-auto text-white p-2">
+                <a href="#" class="nav--link active">Start</a>
+                <a href="#o-restauracji" class="nav--link">O Restauracji</a>
+                <a href="#menu" class="nav--link">Menu</a>
+                <a href="#galeria" class="nav--link">Galeria</a>
+                <a href="#kontakt" class="nav--link">Kontakt</a>
+              </nav>
+            </div>
+            <div class="social-media">
+              <a href="">
+                <div class="social-media--item">
+                  <img src="/facebook-app-symbol.svg" alt="fb">
                 </div>
-                <div class="social-media">
-                  <a href="">
-                    <div class="social-media--item">
-                      <img src="/facebook-app-symbol.svg" alt="fb">
-                    </div>
-                  </a>
-                  <a href="">
-                    <div class="social-media--item">
-                      <img src="/instagram.svg" alt="ig">
-                    </div>
-                  </a>
+              </a>
+              <a href="">
+                <div class="social-media--item">
+                  <img src="/instagram.svg" alt="ig">
                 </div>
-              </div>  
+              </a>
+            </div>
+          </div>  
+      </div>
+      <div class="page-content-two" id="main">
+        <header class="header-area d-lg-none d-block">
+          <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="header-logo">
+              <a href="/">
+                <img src="resocafe.png" alt="">
+              </a>
+            </div>
+            <div class="sidebar-button mobile-menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-          <div class="col-9 offset-3" id="main">
-              <div class="slider">
-                <section class="splide" aria-label="">
+        </header>
+        <div class="slider" id="/">
+          <section class="splide" id="slider1" aria-label="">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="slider--content">
+                    <div class="slider--subtitle"><p>Włoska Restauracja</p></div>
+                    <div class="slider--title"><p>Odkryj smaki Europy w LUCA restocafe Szczecin!</p></div>
+                    <div class="slider--button">
+                      <a href="#menu" class="btn--outline">SPRAWDŹ MENU</a>
+                    </div>
+                  </div>
+                  <div class="slider--image">
+                    <img src="/slide-1.png" alt="">
+                    <div class="slider--dots"></div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="slider--content">
+                    <div class="slider--subtitle"><p>Włoska Restauracja</p></div>
+                    <div class="slider--title"><p>Odkryj smaki Europy w LUCA restocafe Szczecin!</p></div>
+                    <div class="slider--button">
+                      <a href="#menu" class="btn--outline">SPRAWDŹ MENU</a>
+                    </div>
+                  </div>
+                  <div class="slider--image">
+                    <img src="/slide-1.png" alt="">
+                    <div class="slider--dots"></div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="slider--content">
+                    <div class="slider--subtitle"><p>Włoska Restauracja</p></div>
+                    <div class="slider--title"><p>Odkryj smaki Europy w LUCA restocafe Szczecin!</p></div>
+                    <div class="slider--button">
+                      <a href="#menu" class="btn--outline">SPRAWDŹ MENU</a>
+                    </div>
+                  </div>
+                  <div class="slider--image">
+                    <img src="/slide-1.png" alt="">
+                    <div class="slider--dots"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <section class="about" id="o-restauracji">
+          <div class="about--content">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="about--subtitle">Our History</div>
+                  <div class="about--title">Welcome to Foholic Restaurant</div>
+                  <div class="about--text">
+                    <p>Sed luctus massa purus, sed dapibus ex condimentum sed. Vestibulum eget imperdiet metus, varius facilisis nisl. Integer et sem eros. Pellentesque ullamcorper imperdiet laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <p>Donec in consectetur sem, quis blandit nulla. Vivamus nulla nibh, dictum nec urna et, tristique elementum mi. Aenean suscipit sem nec neque pharetra, sed pretium leo feugiat. Etiam magna nunc, varius sit amet eleifend sit amet, lobortis nec nulla.</p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="about--image-main">
+                    <img src="/about.webp" alt="main-img">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="about--image-additional">
+                    <img src="/about-2.webp" alt="">
+                  </div>
+                </div>
+                <div class="col-xl-7">
+                  <div class="about--text-additional">
+                    <p>Our tasting menu presents a seasonal selection from our trusted farmers, foragers and hunters.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="menu block--200" id="menu">
+          <div class="menu--content">
+            <h2>Menu</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+          </div>
+        </section>
+        <section class="gallery" id="galeria">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="gallery--content">
+                  <div class="gallery--subtitle">STEP INSIDE</div>
+                  <div class="gallery--title">Our Gallery</div>
+                  <div class="gallery--text">
+                    <p>Nunc vehicula massa vitae felis suscipit, et semper ligula eleifend. Cras neque justo, congue eget congue sit amet, sodales a ipsum. Suspendisse id faucibus tellus.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="gallery--gallery">
+                <section class="splide" id="slider2" aria-label="Splide Basic HTML Example">
                   <div class="splide__track">
                     <ul class="splide__list">
-                      <li class="splide__slide">
-                        <div class="slider--content">
-                          <div class="slider--subtitle"><p>Włoska Restauracja</p></div>
-                          <div class="slider--title"><p>Odkryj smaki Europy w LUCA restocafe Szczecin!</p></div>
-                          <div class="slider--button">
-                            <a href="#menu" class="btn--outline">SPRAWDŹ MENU</a>
+                      <li class="splide__slide gallery--image">
+                        <a href="/gallery-1.webp" data-lightbox="image-1" data-title="My caption">
+                          <div class="image-lightbox">
+                            <div class="image-lightbox--button">
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6V0H8V6H14V8H8V14H6V8H0V6H6Z" fill="#8A8A8A"/></svg>
+                            </div>
                           </div>
-                        </div>
-                        <div class="slider--image">
-                          <img src="/slide-1.png" alt="">
-                          <div class="slider--dots"></div>
-                        </div>
+                          <img src="/gallery-1.webp" alt="">
+                        </a>
                       </li>
-                      <li class="splide__slide">
-                        <div class="slider--content">
-                          <div class="slider--subtitle"><p>Włoska Restauracja</p></div>
-                          <div class="slider--title"><p>Odkryj smaki Europy w LUCA restocafe Szczecin!</p></div>
-                          <div class="slider--button">
-                            <a href="#menu" class="btn--outline">SPRAWDŹ MENU</a>
-                          </div>
-                        </div>
-                        <div class="slider--image">
-                          <img src="/slide-1.png" alt="">
-                          <div class="slider--dots"></div>
-                        </div>
+                      <li class="splide__slide gallery--image">
+                        <img src="/gallery-2.webp" alt="">
                       </li>
-                      <li class="splide__slide">
-                        <div class="slider--content">
-                          <div class="slider--subtitle"><p>Włoska Restauracja</p></div>
-                          <div class="slider--title"><p>Odkryj smaki Europy w LUCA restocafe Szczecin!</p></div>
-                          <div class="slider--button">
-                            <a href="#menu" class="btn--outline">SPRAWDŹ MENU</a>
-                          </div>
-                        </div>
-                        <div class="slider--image">
-                          <img src="/slide-1.png" alt="">
-                          <div class="slider--dots"></div>
-                        </div>
+                      <li class="splide__slide gallery--image">
+                        <img src="/gallery-3.webp" alt="">
+                      </li>
+                      <li class="splide__slide gallery--image">
+                        <img src="/gallery-1.webp" alt="">
+                      </li>
+                      <li class="splide__slide gallery--image">
+                        <img src="/gallery-2.webp" alt="">
+                      </li>
+                      <li class="splide__slide gallery--image">
+                        <img src="/gallery-3.webp" alt="">
+                      </li>
+                      <li class="splide__slide gallery--image">
+                        <img src="/gallery-1.webp" alt="">
                       </li>
                     </ul>
                   </div>
+                  <div class="splide__arrows gallery--buttons splide__arrows--rtl">
+                    <button class="splide__arrow splide__arrow--prev gallery--buttons-arrow gallery--buttons-prev">
+                      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.17198 7.00023L0.221985 2.05023L1.63598 0.63623L7.99998 7.00023L1.63598 13.3642L0.221985 11.9502L5.17198 7.00023Z" fill="white"/></svg>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next gallery--buttons-arrow gallery--buttons-next">
+                      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.17198 7.00023L0.221985 2.05023L1.63598 0.63623L7.99998 7.00023L1.63598 13.3642L0.221985 11.9502L5.17198 7.00023Z" fill="white"/></svg>
+                    </button>
+                  </div>
                 </section>
               </div>
-
-              <div class="about ">
-                <div class="about--content">
-                  <h2>O Restauracji</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-              </div>
+            </div>
           </div>
+        </section>
+        <section class="contact block--200" id="kontakt">
+          <div class="contact--content">
+            <h2>Kontakt</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+          </div>
+        </section>
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <div class="copyright">
+                  2025 &copy; <a href="https://www.luca.szczecin.pl/">LUCA restocafe Szczecin</a> | Realizacja: <a href="https://www.michalwalczak.pl">Michał Walczak</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
+    </div>
   </div>
-
-    <script type="module" src="./src/js/main.js"></script>
+  <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+  <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
