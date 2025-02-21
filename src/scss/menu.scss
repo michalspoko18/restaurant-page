@@ -1,0 +1,151 @@
+.menu {
+    padding: 80px 0px;
+
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 60px;
+    }
+
+    &__text {
+        font-family: $secend-font;
+        font-size: 18px;
+        line-height: 30px;
+        color: #8A8A8A;
+        margin-bottom: 60px;
+        font-weight: 500;
+    }
+
+    &__image {
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__image {
+            margin-bottom: 60px;
+        }       
+    }
+
+    &__tabs {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-bottom: 60px;
+        padding-bottom: 5px;
+
+        button {
+            background-color: inherit;
+            float: left;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 500;
+            color: #8A8A8A;
+            font-size: 18px;
+
+            &:hover {
+                color: #000;
+            }
+
+            &.active {
+                color: #000;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            height: 8px;
+          }
+        
+        &::-webkit-scrollbar-track {
+            background: #8A8A8A;
+            border-radius: 10px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 10px;
+            border: 2px solid #8A8A8A;
+        }
+
+        ::-webkit-scrollbar-button:single-button {
+            background-color: #bbbbbb;
+          }
+    }
+
+    &__tab-content {
+        display: none;
+    }
+
+    &__tab {
+        border: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        padding: 0px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 82px;
+    }
+
+    &__position {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &--header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--name {
+            font-weight: 500;
+            color: #000;
+            text-transform: uppercase;
+            font-size: 18px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex: 1; // Pozwala się rozciągnąć
+
+            &:after {
+                content: "";
+                flex-grow: 1;
+                height: 1px;
+                border-bottom: 2px dotted #8A8A8A;
+                margin: 0 5px;
+                margin-top: 10px;
+            }
+        }
+
+        &--price {
+            font-weight: 500;
+            color: #000;
+            font-size: 18px;
+            white-space: nowrap; // Zapobiega łamaniu ceny na nową linię
+        }
+
+        &--text {
+            font-family: $secend-font;
+            font-weight: 400;
+            font-size: 18px;
+            color: #8A8A8A;
+        }
+    }
+}

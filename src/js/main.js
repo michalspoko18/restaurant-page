@@ -21,11 +21,11 @@ document.addEventListener( 'DOMContentLoaded', function() {
         perPage: 3,
         gap: 30,
         classes: {
-            arrows: 'splide__arrows gallery--buttons',
-            arrow : 'splide__arrow gallery--buttons-arrow',
-            prev  : 'splide__arrow--prev gallery--buttons-prev',
-            next  : 'splide__arrow--next gallery--buttons-next',
-    },
+            arrows: 'splide__arrows gallery__buttons',
+            arrow : 'splide__arrow gallery__buttons-arrow',
+            prev  : 'splide__arrow--prev gallery__buttons-prev',
+            next  : 'splide__arrow--next gallery__buttons-next',
+        },
 
         breakpoints: {
             1200: {
@@ -68,3 +68,30 @@ lightbox.option({
     'wrapAround': true,
     'disableScrolling': true
   })
+
+// Menu Tab
+function openTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+  
+    tabcontent = document.getElementsByClassName("menu__tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    tablinks = document.getElementsByClassName("menu__tab");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+window.openTab = openTab;
+
+document.addEventListener("DOMContentLoaded", function () {
+    let defaultTab = document.getElementById("defaultTab");
+    if (defaultTab) {
+        defaultTab.click();
+    }
+});
