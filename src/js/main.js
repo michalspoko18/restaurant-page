@@ -1,11 +1,20 @@
 // Import scss files
 import '../scss/styles.scss';
-// import '../../node_modules/lightbox2/dist/css/lightbox.css';
-import * as bootstrap from 'bootstrap';
 
 // Import js files
+import $ from 'jquery';
+import lightbox from 'lightbox2';
 import Splide from '@splidejs/splide';
-// import '../../node_modules/lightbox2/dist/js/lightbox-plus-jquery.js';
+
+window.$ = $;
+
+// Lightbox
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'disableScrolling': true,
+    'showImageNumberLabel': false
+})
 
 document.addEventListener( 'DOMContentLoaded', function() {
     var splide1 = new Splide( '#slider1', {
@@ -47,7 +56,7 @@ node.classList.remove('preload-transitions');
 // Hamburger Menu
 const hamMenu = document.querySelector('.mobile-menu-btn');
 const offScreenMenu = document.querySelector('.fixed-sidebar');
-const blurContent = document.querySelector('.main-page-wrapper .page-content-two');
+const blurContent = document.querySelector('.wrapper .content');
 
 hamMenu.addEventListener('click', () => {
     offScreenMenu.classList.toggle('active');
@@ -62,30 +71,17 @@ closeMenu.addEventListener('click', () => {
     blurContent.classList.toggle('active');
 });
 
-// Lightbox
-lightbox.option({
-    'resizeDuration': 200,
-    'wrapAround': true,
-    'disableScrolling': true
-  })
-
 // Menu Tab
-function openTab(evt, cityName) {
-    var i, tabcontent, tablinks;
-  
-    tabcontent = document.getElementsByClassName("menu__tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    tablinks = document.getElementsByClassName("menu__tab");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+window.openTab = function(evt, menuTab) {
+    const tabcontent = document.querySelectorAll(".menu__tab-content");
+    tabcontent.forEach(tab => tab.style.display = "none");
+
+    const tablinks = document.querySelectorAll(".menu__tab");
+    tablinks.forEach(tab => tab.classList.remove("active"));
+
+    document.getElementById(menuTab).style.display = "block";
+    evt.currentTarget.classList.add("active");
+};
 
 window.openTab = openTab;
 

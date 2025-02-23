@@ -1,4 +1,4 @@
-.main-page-wrapper {
+.wrapper {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -52,18 +52,18 @@
     }
   }
 
-.main-page-wrapper .page-content-two {
+.wrapper .content {
     width: calc(100% - 380px);
 }
 
 @media (min-width: 992px) and (max-width: 1399px) {
-    .main-page-wrapper .page-content-two {
+    .wrapper .content {
       width: calc(100% - 300px);
     }
   }
   
   @media (max-width: 991px) {
-    .main-page-wrapper .page-content-two {
+    .wrapper .content {
       width: 100%;
       
       &.active {

@@ -1,4 +1,29 @@
 .map {
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: -40px;
+    z-index: 10;
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 18p;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+        &__title {
+            font-size: 40px;
+        }     
+    }
 }
