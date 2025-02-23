@@ -3,8 +3,9 @@ $master-font: "Montserrat", sans-serif;
 $secend-font: "Jost", serif;
 
 // Import external css
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
 @import '@splidejs/splide/css';
+@import '../../node_modules/lightbox2/dist/css/lightbox.css';
 
 // Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -15,6 +16,10 @@ $secend-font: "Jost", serif;
 @import "slider.scss";
 @import "gallery.scss";
 @import "about.scss";
+@import "menu.scss";
+@import "contact.scss";
+@import "footer.scss";
+@import "map.scss";
 
 *, *:before, *:after{
   box-sizing: border-box;
@@ -73,23 +78,21 @@ input{
   transition: $null-transition;
 }
 
-.block--200 {
-  height: 600px;
-  padding: 20px;
+.section-main {
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
-footer {
-  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
-
-.copyright {
-  padding: 20px;
-  color: #8A8A8A;
-
-  a {
-    color: #000;
-    font-weight: 500;
-    text-decoration: none;
+@media (max-width: 1400px) {
+  .section-main {
+    margin-left: 50px;
+    margin-right: 50px;
   }
+}
+
+@media (max-width: 768px) {
+  .section-main {
+    margin-left: 30px;
+    margin-right: 30px;
+  }       
 }
