@@ -82,6 +82,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      img {
+        max-width: 240px;
+      }
     }
   }
   
@@ -168,6 +172,11 @@
 .header-logo {
     width: 120px;
     padding: 10px 0 14px 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .sidebar-button {

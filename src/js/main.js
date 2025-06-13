@@ -21,7 +21,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
         arrows: false,
         autoHeight: true,
         autoplay: true,
-        type: 'loop',
+        type: 'slide',
     } ).mount();
 
     var splide2 = new Splide( '#slider2', {
